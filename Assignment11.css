@@ -1,0 +1,194 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: white;
+
+    /* ONLY FIX for footer alignment */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Video */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+/* Heading */
+h1 {
+    margin-top: 50px;
+    color: #3b82f6;
+    font-size: 380%;
+    margin-bottom: 8px;
+    text-shadow: 0 0 13px #000000;
+}
+
+/* Description */
+.desc {
+    font-size: 15px;
+    color: #cbd5f5;
+    margin-top: 0px;
+    font-style: italic;
+}
+
+/* Card */
+.card {
+    background: rgba(15, 23, 42, 0.9);
+    width: 320px;
+    margin: 60px auto 20px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    border: 1px solid #1e293b;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+/* Hover */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(59,130,246,0.4);
+}
+
+/* Image */
+.card img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #3b82f6;
+    box-shadow: 0 0 15px #000;
+}
+
+/* Name */
+#userName {
+    margin: 10px 0;
+}
+
+/* Email */
+#userEmail {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #3b82f6;
+}
+
+/* Loading */
+.loading {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* Footer (NO GAP FIX) */
+footer {
+    margin-top: auto;   /* THIS pushes footer to bottom */
+    text-align: center;
+    padding: 15px;
+    background: rgba(2, 6, 23, 0.9);
+    color: white;
+    border-top: 1px solid  rgba(2, 6, 23, 0.9);;
+    margin-top: 0px;
+}
+#last{
+    background-color: rgba(2, 6, 23, 0.9);
+    color: #cbd5f5;
+    padding: 50px;
+    font-size: 180%;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 220%;
+        margin-top: 30px;
+    }
+
+    .card {
+        width: 80%;
+        margin: 40px auto 20px auto;
+        padding: 20px;
+    }
+
+    #last {
+        font-size: 130%;
+        padding: 30px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 180%;
+        margin-top: 20px;
+    }
+
+    .desc {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 30px auto 15px auto;
+        padding: 18px;
+    }
+
+    .card img {
+        width: 100px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #last {
+        font-size: 120%;
+        padding: 25px;
+    }
+}
+
+/* Large Screens (Laptop/Desktop fine tuning) */
+@media (min-width: 1200px) {
+
+    .card {
+        width: 350px;
+    }
+
+    h1 {
+        font-size: 420%;
+    }
+}
